@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Animais Achados</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Se você tiver um arquivo CSS separado -->
+  </head>
+  <body>
+    <div class="page">
+      <form method="POST" class="formCadastro" enctype="multipart/form-data">
+        <h1>Cadastro de Animais Achados</h1>
+        <p>Preencha os dados do animal encontrado.</p>
+        <label for="foto">Foto do Animal</label>
+        <input
+          type="file"
+          id="foto"
+          name="foto"
+          accept="image/*"
+          onchange="visualizarFoto(this)"
+        />
+        <img
+          id="foto-preview"
+          src="#"
+          alt="Foto do Animal"
+          style="max-width: 100%; display: none"
+        />
+        <label for="especie">Espécie</label>
+        <select id="especie" name="especie">
+          <option value="cao">Cão</option>
+          <option value="gato">Gato</option>
+          <option value="passaro">Pássaro</option>
+        </select>
+        <label for="raca">Raça</label>
+        <select id="raca" name="raca">
+          <!-- As opções de raça serão preenchidas dinamicamente com JavaScript -->
+        </select>
+        <label for="cor">Cor</label>
+        <select id="cor" name="cor">
+          <option value="preto">Preto</option>
+          <option value="branco">Branco</option>
+          <option value="marrom">Marrom</option>
+          <option value="cinza">Cinza</option>
+          <option value="amarelo">Amarelo</option>
+          <option value="laranja">Laranja</option>
+          <option value="creme">Creme</option>
+          <option value="outro">Outro</option>
+        </select>
+        <label for="localizacao">Localização no Mapa</label>
+        <div id="mapa" style="height: 300px"></div>
+        <button type="button" onclick="buscarLocalizacao()">
+          Selecionar no Mapa
+        </button>
+        <!-- Esse campo oculto será preenchido automaticamente com as coordenadas do local selecionado no mapa -->
+        <input type="hidden" id="coordenadas" name="coordenadas" />
+        <label for="dataHora">Data e Hora</label>
+        <input type="datetime-local" id="dataHora" name="dataHora" />
+        <!-- Campo para gerar o QR code -->
+        <label for="qrcode">QR Code</label>
+        <div id="qrcode"></div>
+        <button type="button" onclick="gerarQRCode()">Gerar QR Code</button>
+        <button type="submit">Cadastrar Animal Achado</button>
+      </form>
+    </div>
+    <footer>
+      <p>Direitos Autorais</p>
+      <p>Anuncie</p>
+      <p>Parceiros</p>
+      <p>Suporte</p>
+    </footer>
+    <!-- Script para integrar o mapa do Google -->
+    <script>
+      // Função para inicializar o mapa
+      function initMap() {
+        var mapa = new google.maps.Map(document.getElementById("mapa"), {
+          center: { lat: -23.5505, lng: -46.6333 }, // Coordenadas de São Paulo (coordenadas padrão)
+          zoom: 12, // Nível de zoom padrão
+        });
+
+        // Adicione um marcador ao clicar no mapa
+        var marcador = new google.maps.Marker({
+          position: { lat: -23.5505, lng: -46.6333 },
+          map: mapa,
+          draggable: true, // Permitir arrastar o marcador
+        });
+
+        // Listener para atualizar as coordenadas quando o marcador é arrastado
+        google.maps.event.addListener(marcador, "dragend", function (event) {
+          document.getElementById("coordenadas").value =
+            event.latLng.lat() + "," + event.latLng.lng();
+        });
+      }
+
+      // Função para buscar a localização atual do usuário no mapa
+      function buscarLocalizacao() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            var coordenadas = new google.maps.LatLng(latitude, longitude);
+            document.getElementById("coordenadas").value =
+              latitude + "," + longitude;
+            mapa.setCenter(coordenadas);
+            marcador.setPosition(coordenadas);
+          });
+        } else {
+          alert("Geolocalização não é suportada neste navegador.");
+        }
+      }
+
+      // Função para visualizar a foto do animal
+      function visualizarFoto(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("foto-preview").style.display = "block";
+            document.getElementById("foto-preview").src = e.target.result;
+          };
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      // Função para gerar o QR code
+      function gerarQRCode() {
+        var qrCodeDiv = document.getElementById("qrcode");
+        var dadosCadastro = JSON.stringify({
+          especie: document.getElementById("especie").value,
+          raca: document.getElementById("raca").value,
+          cor: document.getElementById("cor").value,
+          localizacao: document.getElementById("coordenadas").value,
+          dataHora: document.getElementById("dataHora").value,
+        });
+        qrCodeDiv.innerHTML = ""; // Limpa o conteúdo anterior do elemento
+        new QRCode(qrCodeDiv, dadosCadastro);
+      }
+    </script>
+    <!-- Script para carregar a API do Google Maps -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API&callback=initMap"
+      async
+      defer
+    ></script>
+    <!-- Biblioteca para gerar QR code -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  </body>
+</html>
