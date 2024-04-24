@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Define a codificação do documento HTML -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Define a largura da tela e a escala inicial -->
+    <title>PetFinder</title>
+    <!-- Define o título da página -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Importa um arquivo de folha de estilo externo -->
+  </head>
+  <body>
+    <div class="page">
+      <!-- Início do contêiner da página -->
+      <form method="POST" class="formLogin">
+        <!-- Início do formulário de cadastro -->
+        <h1>Cadastro</h1>
+        <!-- Título do formulário -->
+        <p>Digite os seus dados para fazer seu cadastro.</p>
+        <!-- Descrição do formulário -->
+        <label for="nome">Nome Completo</label>
+        <!-- Rótulo do campo de nome -->
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite seu nome completo"
+          autofocus
+        />
+        <!-- Campo de entrada para o nome -->
+        <label for="email">E-mail</label>
+        <!-- Rótulo do campo de e-mail -->
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Digite seu e-mail"
+        />
+        <!-- Campo de entrada para o e-mail -->
+        <label for="telefone">Telefone</label>
+        <!-- Rótulo do campo de telefone -->
+        <input
+          type="tel"
+          id="telefone"
+          name="telefone"
+          placeholder="Digite seu telefone"
+        />
+        <!-- Campo de entrada para o telefone -->
+        <label for="endereco">Endereço</label>
+        <!-- Rótulo do campo de endereço -->
+        <input
+          type="text"
+          id="endereco"
+          name="endereco"
+          placeholder="Digite seu endereço"
+        />
+        <!-- Campo de entrada para o endereço -->
+        <label for="senha">Senha</label>
+        <!-- Rótulo do campo de senha -->
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          placeholder="Digite sua senha"
+        />
+        <!-- Campo de entrada para a senha -->
+        <label for="confirmarSenha">Confirme a sua senha</label>
+        <!-- Rótulo do campo de confirmação de senha -->
+        <input
+          type="password"
+          id="confirmarSenha"
+          name="confirmarSenha"
+          placeholder="Confirme sua senha"
+        />
+        <!-- Campo de entrada para confirmar a senha -->
+        <label for="tipoAnimal">Cadastro de Animais</label>
+        <!-- Rótulo do campo de seleção de tipo de animal -->
+        <select id="tipoAnimal" name="tipoAnimal">
+          <!-- Campo de seleção de tipo de animal -->
+          <option value="perdido">Animais Perdidos</option>
+          <!-- Opção para animais perdidos -->
+          <option value="achado">Animais Achados</option>
+          <!-- Opção para animais achados -->
+          <option value="adocao">Animais Para Adoção</option>
+          <!-- Opção para animais para adoção -->
+        </select>
+        <button type="submit">Salvar Informações</button>
+        <!-- Botão de envio do formulário -->
+      </form>
+      <!-- Fim do formulário de cadastro -->
+    </div>
+    <!-- Fim do contêiner da página -->
+    <footer>
+      <!-- Início do rodapé -->
+      <p>Direitos Autorais</p>
+      <!-- Link para informações de direitos autorais -->
+      <p>Anuncie</p>
+      <!-- Link para informações de anúncios -->
+      <p>Parceiros</p>
+      <!-- Link para informações de parceiros -->
+      <p>Suporte</p>
+      <!-- Link para informações de suporte -->
+    </footer>
+    <!-- Fim do rodapé -->
+  </body>
+</html>
