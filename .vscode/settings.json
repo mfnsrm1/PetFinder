@@ -1,3 +1,6 @@
 {
-  "CodeGPT.apiKey": "OpenAI"
+  "java.debug.settings.onBuildFailureProceed": true,
+  "cSpell.words": [
+    "cachorro"
+  ]
 }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metadados -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suporte - PetFinder</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <!-- Título do site -->
+      <h1 id="logo">PetFinder</h1>
+      <!-- Navegação -->
+      <nav>
+        <!-- Lista de links -->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Parceiros.html">Parceiros</a></li>
+          <li><a href="QuemSomos.html">Quem Somos?</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <!-- Seção de Suporte -->
+      <section id="suporte">
+        <h2>Suporte</h2>
+        <!-- Formulário de contato -->
+        <form
+          action="mailto:suporte@petfinder.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required /><br /><br />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="mensagem">Mensagem:</label><br />
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="4"
+            cols="50"
+            required
+          ></textarea
+          ><br /><br />
+
+          <input type="submit" value="Enviar" />
+        </form>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <!-- Links de informações -->
+      <p><a href="direitos.html">Direitos Autorais</a></p>
+      <p><a href="anuncie.html">Anuncie</a></p>
+      <p><a href="parceiros.html">Parceiros</a></p>
+      <p>Suporte</p>
+    </footer>
+  </body>
+</html>

@@ -3,24 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PetFinder</title>
-    <link rel="stylesheet" href="style.css" />
-    <title>Login</title>
+    <title>Login - PetFinder</title>
+    <!-- Importa o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <div class="page">
-      <form method="POST" class="formLogin">
-        <h1>Login</h1>
-        <p>Digite os seus dados de acesso no campo abaixo.</p>
-        <label for="email">E-mail</label>
-        <input type="email" placeholder="Digite seu e-mail" autofocus"true"/>
-        <label for="password">Senha</label>
-        <input type="password" placeholder="Digite sua senha" />
-        <a href="/">Esqueci minha senha</a>
-        <input type="submit" value="Acessar" class="btn" />
-      </form>
+    <!-- Cabeçalho -->
+    <header>
+      <!-- Contém o logo e o título do site -->
+      <div class="logo-container">
+        <img src="../img/logo_cao.png" alt="Logo do PetFinder" id="logo" />
+        <h1 id="site-title">PetFinder</h1>
+      </div>
+      <!-- Contém botões de login e redes sociais -->
+      <div class="button-container">
+        <button id="login-button" onclick="window.location.href= 'login.html'">
+          Login
+        </button>
+        <div class="social-buttons">
+          <button id="facebook-button">Facebook</button>
+          <button id="instagram-button">Instagram</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navegação -->
+    <nav>
+      <!-- Lista de links de navegação -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Parceiros</a></li>
+        <li><a href="#">Quem somos?</a></li>
+      </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+      <!-- Contêiner para o formulário de login -->
+      <div class="login-container">
+        <h2>Login</h2>
+        <!-- Formulário de login -->
+        <form action="login.php" method="POST">
+          <div class="input-group">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="input-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+        <!-- Link para página de cadastro -->
+        <p>
+          Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a>
+        </p>
+      </div>
     </div>
+
+    <!-- Rodapé -->
     <footer>
+      <!-- Links de informações no rodapé -->
       <p>Direitos Autorais</p>
       <p>Anuncie</p>
       <p>Parceiros</p>

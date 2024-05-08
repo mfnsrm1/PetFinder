@@ -3,49 +3,182 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PetFinder</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Login - PetFinder</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      /* Estilos adicionais específicos para a página de login */
+      body {
+        min-height: 100vh;
+        /* Define a altura mínima do corpo para ocupar pelo menos toda a altura da janela de visualização */
+        display: flex;
+        /* Usa flexbox para alinhar os itens verticalmente */
+        flex-direction: column;
+        /* Alinha os itens verticalmente */
+        justify-content: space-between;
+        /* Distribui os itens verticalmente */
+        background-color: #f2f2f2;
+        /* Cor de fundo */
+      }
+
+      .content {
+        flex: 1;
+        /* Faz com que o conteúdo ocupe o espaço disponível */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Centraliza o conteúdo */
+      }
+
+      .login-container {
+        background-color: #ffffff;
+        /* Cor de fundo do contêiner de login */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        /* Sombra */
+      }
+
+      .login-container h2 {
+        margin-bottom: 20px;
+      }
+
+      .login-container form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .login-container .input-group {
+        margin-bottom: 15px;
+      }
+
+      .login-container label {
+        font-weight: bold;
+      }
+
+      .login-container input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .login-container button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .login-container button:hover {
+        background-color: #45a049;
+      }
+
+      .login-container p {
+        margin-top: 10px;
+      }
+
+      /* Estilos para cabeçalho, navegação e rodapé */
+      header {
+        background-color: #b1944f;
+        /* Cor de fundo do cabeçalho */
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      nav ul li {
+        margin-right: 20px;
+      }
+
+      nav ul li:last-child {
+        margin-right: 0;
+      }
+
+      footer {
+        background-color: #5f5353;
+        /* Cor de fundo do rodapé */
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
+    <!-- Cabeçalho -->
     <header>
-      <h1 id="logo">PetFinder</h1>
-      <button id="login-button" onclick="window.location.href= 'login.html'">
-        Login
-      </button>
-      <button
-        id="cadastro-button"
-        onclick="window.location.href= 'cadastro.html'"
-      >
-        Cadastro
-      </button>
-      <div class="social-buttons">
-        <button id="facebook-button">Facebook</button>
-        <button id="instagram-button">Instagram</button>
+      <div class="logo-container">
+        <img src="../img/logo_cao.png" alt="Logo do PetFinder" id="logo" />
+        <!-- Logo do PetFinder -->
+        <h1 id="site-title">PetFinder</h1>
+        <!-- Título do site -->
+      </div>
+      <div class="button-container">
+        <button id="login-button" onclick="window.location.href= 'login.html'">
+          Login
+        </button>
+        <div class="social-buttons">
+          <button id="facebook-button">Facebook</button>
+          <!-- Botão de login com Facebook -->
+          <button id="instagram-button">Instagram</button>
+          <!-- Botão de login com Instagram -->
+        </div>
       </div>
     </header>
 
+    <!-- Navegação -->
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
+        <!-- Link para a página inicial -->
         <li><a href="#">Parceiros</a></li>
+        <!-- Link para a página de parceiros -->
         <li><a href="#">Quem somos?</a></li>
+        <!-- Link para a página "Quem somos?" -->
       </ul>
     </nav>
-    <main>
-      <section id="main-content">
-        <h2>O que procura?</h2>
-        <div class="buttons-container">
-          <button>Animais Perdidos</button>
-          <button>Animais Achado</button>
-          <button>Animais para Adoção</button>
-        </div>
-      </section>
-    </main>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+      <div class="login-container">
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+          <div class="input-group">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="input-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+        <p>
+          Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
     <footer>
       <p>Direitos Autorais</p>
+      <!-- Informação sobre direitos autorais -->
       <p>Anuncie</p>
+      <!-- Informação sobre como anunciar -->
       <p>Parceiros</p>
+      <!-- Informação sobre parceiros -->
       <p>Suporte</p>
+      <!-- Informação sobre suporte -->
     </footer>
   </body>
 </html>

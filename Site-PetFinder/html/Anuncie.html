@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anuncie - PetFinder</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">PetFinder</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Parceiros.html">Parceiros</a></li>
+          <li><a href="QuemSomos.html">Quem Somos?</a></li>
+          <li><a href="Anuncie.html">Anuncie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="main-content">
+        <h2>Anuncie Conosco</h2>
+        <p>Entre em contato para anunciar no PetFinder.</p>
+        <form action="submit_form.php" method="POST">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Direitos Autorais</p>
+      <p>Anuncie</p>
+      <p>Parceiros</p>
+      <p>Suporte</p>
+    </footer>
+  </body>
+</html>

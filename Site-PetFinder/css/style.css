@@ -1,0 +1,580 @@
+/* Estilos adicionais */
+body {
+  min-height: 100vh;
+  /* Define a altura mínima do corpo para ocupar pelo menos toda a altura da janela de visualização */
+  display: flex;
+  /* Usa flexbox para alinhar os itens verticalmente */
+  flex-direction: column;
+  /* Alinha os itens verticalmente */
+  justify-content: center;
+  /* Centraliza os itens verticalmente */
+  align-items: center;
+  /* Centraliza os itens horizontalmente */
+  background-image: url("../img/cachorro-labrador.jpg");
+  /* Define a imagem de plano de fundo */
+  background-size: 100% auto; /* Define o tamanho da imagem de fundo (largura: 100%, altura: automática) */
+  background-position: center; /* Centraliza a imagem de plano de fundo */
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  background-color: #b1944f;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+}
+
+#logo {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#site-title {
+  margin: 0;
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #5f5353;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+main {
+  flex: 1;
+  /* Faz o conteúdo principal expandir para ocupar todo o espaço disponível */
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: flex-start; /* Alinha o conteúdo no topo */
+}
+
+footer {
+  background-color: #5f5353;
+  padding: 20px;
+  width: 100%;
+  color: white;
+}
+
+/* Estilos dos botões */
+.button-animal-perdido {
+  background-image: url("../img/piriquito.avif"); /* Adicione a imagem de fundo desejada */
+  background-size: cover;
+  border: none;
+  color: rgb(19, 17, 17);
+  padding: 60px 30px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-animal-achado {
+  background-image: url("../img/cao\ perdido\ .avif"); /* Adicione a imagem de fundo desejada */
+  background-size: cover;
+  border: none;
+  color: rgb(19, 17, 17);
+  padding: 60px 30px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-animal-adocao {
+  background-image: url("../img/cao-pug-i.avif"); /* Adicione a imagem de fundo desejada */
+  background-size: cover;
+  border: none;
+  color: rgb(26, 24, 24);
+  padding: 60px 30px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-animal-perdido:hover,
+.button-animal-achado:hover,
+.button-animal-adocao:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px; /* Tamanho da fonte desejado */
+  padding: 20px 40px; /* Espaçamento interno (topo/baixo, esquerda/direita) */
+  line-height: 100%; /* Altura da linha de texto */
+  vertical-align: bottom; /* Alinha o texto na parte inferior */
+}
+
+
+
+/* Estilos para a página de login */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container .input-group {
+  margin-bottom: 15px;
+}
+
+.login-container label {
+  font-weight: bold;
+}
+
+.login-container input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+}
+
+.login-container p {
+  margin-top: 10px;
+}
+
+/* Estilos para cabeçalho, navegação e rodapé */
+
+header {
+  background-color: #b1944f;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+footer {
+  background-color: #5f5353;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+
+
+
+
+
+/* Estilos para a página de cadastro DO CLIENTE*/
+
+/* Estilos gerais do corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background-color: #b1944f;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para o logotipo */
+#logo {
+  margin: 0;
+}
+
+/* Estilos para a navegação */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+/* Estilos para o conteúdo principal */
+.page {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o formulário de cadastro */
+.formLogin {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLogin h1 {
+  margin-top: 0;
+}
+
+.formLogin label {
+  margin-top: 10px;
+}
+
+.formLogin input,
+.formLogin select {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.formLogin button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formLogin button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #5f5353;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px;
+}
+
+footer p a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+/* Estilos Cadastro de Animais Achados */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#mapa {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+#foto-preview {
+  max-width: 100%;
+  display: none;
+}
+
+/* Estilos do rodapé */
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+footer p {
+  display: inline-block;
+  margin: 0 10px;
+  color: #666;
+}
+
+
+
+
+/* Estilos Cadastro de Animais Achados */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#mapa {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+#foto-preview {
+  max-width: 100%;
+  display: none;
+}
+
+/* Estilos do rodapé */
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+footer p {
+  display: inline-block;
+  margin: 0 10px;
+  color: #666;
+}
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#mapa {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+#foto-preview {
+  max-width: 100%;
+  display: none;
+}
+
+/* Estilos do rodapé */
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+footer p {
+  display: inline-block;
+  margin: 0 10px;
+  color: #666;
+}
